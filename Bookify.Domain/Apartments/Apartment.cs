@@ -3,13 +3,13 @@ using Bookify.Domain.Shared;
 
 namespace Bookify.Domain.Apartments
 {
-    public sealed class Apartment : Entity // sealed inherit edilemez ufak bir miktar performans artışı sağlayabilir.
+    public sealed class Apartment : Entity 
     {
         public Apartment(
             Guid id,
             Name name,
             Description description,
-            Adress adress,
+            Address adress,
             Money price,
             Money cleaningFee,
             List<Amenity> amenities)
@@ -17,7 +17,7 @@ namespace Bookify.Domain.Apartments
         {
             Name = name;
             Description = description;
-            Adress = adress;
+            Address = adress;
             Price = price;
             CleaningFee = cleaningFee;
             Amenities = amenities;
@@ -25,8 +25,7 @@ namespace Bookify.Domain.Apartments
 
         public Name Name { get; private set; }
         public Description Description { get; private set; }
-        public Adress Adress { get; }
-        public Adress Address { get; private set; }
+        public Address Address { get; private set; }
         public decimal PriceAmount { get; private set; }
         public Money Price { get; private set; }
 

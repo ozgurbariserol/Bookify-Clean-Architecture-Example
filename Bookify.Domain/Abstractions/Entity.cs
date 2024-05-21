@@ -12,7 +12,6 @@
 
         public Guid Id { get; init; }
 
-
         public IReadOnlyList<IDomainEvent> GetDomainEvents() 
         { 
             return domainEvents.ToList();
