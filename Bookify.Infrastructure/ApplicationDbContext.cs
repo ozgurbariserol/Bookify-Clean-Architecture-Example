@@ -61,7 +61,5 @@ namespace Bookify.Infrastructure
                 await _publisher.Publish(domainEvent);
             }
         }
-
-
     }
 }
